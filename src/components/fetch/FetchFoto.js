@@ -2,7 +2,7 @@ import axios from "axios";
 
 axios.defaults.baseURL = "https://api.unsplash.com/";
 
-export const fetchFoto = async (userQuery, page = 1) => {
+export const fetchFotoWithTopic = async (userQuery, page = 1) => {
   const params = {
     query: userQuery,
     client_id: "l8xdQE6Jn13MnYMcD4UpAxY1HMTjQpAJUcEtBcXnH7A",

@@ -5,8 +5,8 @@ export default function Loader({ loading }) {
     <>
       <BarLoader
         loading={loading}
-        height="3"
-        width="150"
+        height="6"
+        width="300"
         speedMultiplier="0.5"
       />
     </>

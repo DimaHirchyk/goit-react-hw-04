@@ -1,11 +1,13 @@
+import toast, { Toaster } from "react-hot-toast";
+
 export default function Searchbar({ onSearch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const topic = form.elements.inp.value.trim();
-
     if (topic === "") {
-      alert("Введіть текст");
+      toast.error("Введіть текст");
+
       return;
     }
 
@@ -27,6 +29,7 @@ export default function Searchbar({ onSearch }) {
           <button type="submit">Search</button>
         </form>
       </header>
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }
